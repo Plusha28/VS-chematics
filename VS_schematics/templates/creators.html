@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="index-content">
+    <div class="title-of-page"><p>{{ message }}</p></div>
+    <div class="add-schematic-block">
+        <form onsubmit="return false">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Автор</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Например, YourCreator" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Название</label>
+                <p class="red">Названия могут повторяться, но рекомендуем добавить вашей работе больше индивидуальности</p>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Например, Замок твоей мечты" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Категория</label>
+                <select class="form-control" id="exampleFormControlSelect1" required>
+                    <option>Постройка</option>
+                    <option>Чизл</option>
+                    <option>Картина</option>
+                    <option>Другое</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Использование модов</label>
+                <select class="form-control" id="exampleFormControlSelect1" required>
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Укажите использованные моды через запятую (если есть), а также их версии</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Например, Soil Brick">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Описание</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Например, Маленькая избушка размером 5х8, 1 этаж, внешняя отделка, внутренняя отделка отсутствует и т.д." required></textarea>
+            </div>
+
+
+                <div class="form-group" id="formAddJSON" >
+                    <label for="exampleFormControlFile1">Загрузите вашу работу (файл в формате JSON)</label>
+                    <p align="justify" class="red">ВАЖНО! Название файла должно соответствовать названию вашей постройки и быть на АНГЛИЙСКОМ ЯЗЫКЕ. Например, постройка называется "Замок", JSON-файл должен называться "Castle". Если из-за размера постройка разделена на несколько частей, пронумеруйте их.</p>
+
+                    <div class="add-json-form">
+                    <input type="file" class="form-control-file" accept=".json" required>
+                    <span class="delete-json">Удалить</span>
+                    </div>
+
+                    <span class="btn-add-json" id="addJSON" onClick={AddInput}>Добавить JSON-файл</span>
+                    <!--<span class="btn-add-json" onclick="removeElement()">Удалить последний файл</span>-->
+                </div>
+
+                <form name="" method="post" action="#" enctype="multipart/form-data" class="feedback-form-1">
+                    <label for="exampleFormControlFile1">Загрузите скриншоты вашей работы (файлы в формате JPEG)</label> </br>
+                    <input class="screenshots" type=file id=pct onchange="previewFile()"></form></br>
+                    <img id="img" src="" height="200" alt="Image preview...">
+                </form>
+            </br>
+        </form>
+    </div>
+
+</div>
+
+        {% endblock %}

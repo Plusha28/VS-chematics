@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="index-content">
+    <div class="contacts-block">
+        <div class="title-of-page"><p>{{ message }}</p></div>
+        <div class="contacts-block-links">
+            <div class="discord">
+                <p>
+                    <a href="https://discord.gg/KGkWUfcbCM">
+                        <img src="static/img/logo-discord.png" width="70"
+                             height="70" border="0" alt="Discord">
+                    </a>    Наш сервер Discord
+                </p>
+            </div>
+
+            <div class="vk">
+                <p>
+                    <a href="https://vk.com/vintageages">
+                        <img src="static/img/logotipVK.png" width="75"
+                             height="75" border="0" alt="VK">
+                    </a>Наша группа VK
+                </p>
+            </div>
+        </div>
+
+        <p>Вы также можете поддержать нас и помочь в развитии сайта!</p>
+    </div>
+</div>
+
+        {% endblock %}
