@@ -22,7 +22,7 @@ def category():
     """Renders the category page."""
     return render_template(
         'category.html',
-        title='Category',
+        title='Категории',
         year=datetime.now().year,
         message='Категории'
     )
@@ -32,7 +32,7 @@ def rules():
     """Renders the rules page."""
     return render_template(
         'rules.html',
-        title='Rules',
+        title='Правила',
         year=datetime.now().year,
         message='Правила'
     )
@@ -42,7 +42,7 @@ def creators():
     """Renders the creators page."""
     return render_template(
         'creators.html',
-        title='Creators',
+        title='Авторам',
         year=datetime.now().year,
         message='Авторам'
     )
@@ -52,7 +52,7 @@ def contacts():
     """Renders the contacts page."""
     return render_template(
         'contacts.html',
-        title='Contacts',
+        title='Контакты',
         year=datetime.now().year,
         message='Контакты'
     )

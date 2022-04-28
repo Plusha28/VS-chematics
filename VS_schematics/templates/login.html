@@ -3,8 +3,29 @@
 {% block content %}
 
 <div class="index-content">
-    <div class="title-of-page"><p>{{ message }}</p></div>
+    <div class="title-of-page"><p>{{ title }}</p></div>
+
+
+    <div class="container-fluid">
+
+            <div class="form-container">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Имя/Никнейм" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Пароль" required>
+                    </div>
+
+                    <button class="btn">Войти</button> </br>
+                    </br>
+                    <p>Если у Вас нет аккаунта на нашем сайте, Вы можете Зарегистрироваться, нажав кнопку ниже</p>
+                    <span class="btn"><a class="text-dark" href="{{ url_for('register') }}">Регистрация</a></span>
+                </form>
+            </div>
+
+    </div>
 
 </div>
 
-{% endblock %}
+        {% endblock %}
